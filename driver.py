@@ -38,9 +38,6 @@ def main():
         final = ''
         results = sp.current_user_top_tracks(50, time_range='short_term')
         for t, res in enumerate(reversed(results['items']), start=1):
-            # print(res['name'], '-', ',
-            #       '.join([r['name'] for r in res['artists']]),
-            #       ':', str(res['popularity'])+'%')
             for r in res['artists']:
                 if(r['name'] in artists):
                     artists[r['name']] += math.log2(t)
@@ -49,11 +46,8 @@ def main():
         artists = sorted(artists.items(), key=lambda x: (x[1], x[0]),
                          reverse=True)[:10]
         freq = sum(x[1] for x in artists)
-        # print('{:<20} {:^20} {:>20}'.format('Artist', 'Percentage bar',
-        #                                     'Different songs'))
         for i, j in artists:
             bar = generateBarChart(j/freq, 20)
-            # print('{:<20} {:^20} {:>13}'.format(i, bar, j))
             final += '{:<20} {:^20} {:>8.2f}%\n'.format(
                 i, bar, j/freq*100)
         return final

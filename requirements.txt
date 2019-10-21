@@ -1,0 +1,17 @@
+autopep8==1.4.4
+certifi==2019.9.11
+chardet==3.0.4
+Deprecated==1.2.6
+entrypoints==0.3
+flake8==3.7.8
+idna==2.8
+mccabe==0.6.1
+pycodestyle==2.5.0
+pyflakes==2.1.1
+PyGithub==1.43.8
+PyJWT==1.7.1
+requests==2.22.0
+six==1.10.0
+spotipy==2.4.4
+urllib3==1.25.6
+wrapt==1.11.2

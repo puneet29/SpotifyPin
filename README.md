@@ -4,6 +4,10 @@
 
 This repo contains necessary script for updating the GitHub Gist with your top Spotify artists over 4 weeks. Inspired by the profile of [Jack](https://github.com/jacc). Look at his profile, he's got an awesome pin collection on his profile.
 
+![Pin Screenshot](Screenshots/PinScreenshot.PNG)
+
+Desi at Heart ❤️(Moosewala on top)
+
 ## Usage
 
 1. Clone the repository

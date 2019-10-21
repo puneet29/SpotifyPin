@@ -51,6 +51,8 @@ Desi at Heart ❤️(Moosewala on top)
 
 5. Update ```credentials.py```. Generate new token for Gist privileges from Settings->Developer Options.
 
-6. Update ```run.bat```. Update the path to cloned directory.
+6. Update ```driver.py```. Change the username to your own username.
 
-7. (For windows only) Setup a new task in task scheduler. Setup a time at which the run.bat file will run in background.
+7. Update ```run.bat```. Update the path to cloned directory.
+
+8. (For windows only) Setup a new task in task scheduler. Setup a time at which the run.bat file will run in background.

@@ -40,16 +40,17 @@ def main():
         for t, res in enumerate(reversed(results['items']), start=1):
             for r in res['artists']:
                 if(r['name'] in artists):
-                    artists[r['name']] += math.log2(t)
+                    artists[r['name']][0] += math.log2(t)
+                    artists[r['name']][1] = res['name']
                 else:
-                    artists[r['name']] = math.log2(t)
-        artists = sorted(artists.items(), key=lambda x: (x[1], x[0]),
+                    artists[r['name']] = [math.log2(t), res['name']]
+        artists = sorted(artists.items(), key=lambda x: (x[1][0], x[0]),
                          reverse=True)[:10]
-        freq = sum(x[1] for x in artists)
+        freq = sum(x[1][0] for x in artists)
         for i, j in artists:
-            bar = generateBarChart(j/freq, 20)
-            final += '{:<20} {:^20} {:>8.2f}%\n'.format(
-                i, bar, j/freq*100)
+            bar = generateBarChart(j[0]/freq, 20)
+            final += '{:<25} {:<10} {:>10.2f}% {:>35}\n'.format(
+                i, bar, j[0]/freq*100, j[1])
         return final
     else:
         return("Can't get token for", USERNAME)
